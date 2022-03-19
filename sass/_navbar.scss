@@ -1,0 +1,79 @@
+.navbar {
+  background-color: #fff;
+  letter-spacing: 0.125rem;
+  padding: 0;
+
+  a {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .container {
+    padding: 36px 16px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 16px;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 30px !important;
+    font-weight: 700;
+    padding: 0;
+    letter-spacing: normal;
+  }
+
+  .navbar-toggler {
+    color: #fff;
+  }
+
+  .navbar-nav {
+    @include media-breakpoint-down(lg) {
+      margin-top: 1.125rem;
+    }
+  }
+
+  .nav-item {
+    font-family: "Arimo", sans-serif;
+
+    @include media-breakpoint-up(lg) {
+      &::after {
+        content: "";
+        display: block;
+        width: 65%;
+        height: 3px;
+        background-color: #fff;
+        margin: auto;
+        transition: 0.3s;
+        margin-top: -3px;
+      }
+
+      &:hover::after {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .nav-link {
+    color: $black !important;
+
+    &:hover {
+      color: $primary !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 36px 20px !important;
+    }
+  }
+
+  .btn {
+    padding: 15px 26px;
+    &:hover {
+      color: $white;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 20px;
+    }
+  }
+}

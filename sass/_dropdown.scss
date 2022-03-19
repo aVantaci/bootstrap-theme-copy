@@ -1,0 +1,46 @@
+.dropdown {
+  background-color: $primary;
+  font-family: "Arimo", sans-serif;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+
+  * {
+    color: #fff;
+    background-color: $primary;
+    font-size: 12px;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    border: transparent;
+  }
+
+  .container {
+    padding: 8px 8px;
+  }
+
+  .btn {
+    padding: 8px 6.5px 8px 8px;
+    white-space: nowrap;
+
+    &::after {
+      opacity: 50%;
+      transition: 0.2s;
+      margin-left: -0.125rem;
+    }
+
+    &:focus {
+      background-color: $primary;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: #fff;
+    }
+
+    &.show::after {
+      opacity: 100%;
+      transform: rotate(180deg);
+    }
+  }
+}
